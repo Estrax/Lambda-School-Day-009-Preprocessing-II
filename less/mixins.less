@@ -1,11 +1,11 @@
 // Mixins in here
 
-.button-gen(@color: @button-bg, @txtcolor: @white) {
+.button-gen(@color: @button-bg, @txtcolor: @white, @fontsize: 18px, @txtalign: center, @btn-border-radius: 16px, @btn-padding: 14px 0, @btn-width: 80%) {
     background: @color;
     color: @txtcolor;
-    font-size: 18px;
-    text-align: center;
-    border-radius: 16px;
-    padding: 14px 0;
-    width: 80%;
+    font-size: @fontsize;
+    text-align: @txtalign;
+    border-radius: @btn-border-radius;
+    padding: @btn-padding;
+    width: @btn-width;
 }

@@ -11,8 +11,16 @@
     p {
       margin-bottom: 16px;
     }
-    @media @mobile {
+
+    @media @tablet {
       margin-top: 110px;
+    }
+
+    @media @mobile {
+      /* can be deleted while there is @media @tablet that is exactly the same,
+      but I still leave it there for the future adjustments */
+      
+      // margin-top: 110px;
     }
   }
 
@@ -26,11 +34,15 @@
       width: 48%;
       padding-right: 1%;
       
-      @media @mobile {
+      @media @tablet {
         width: 100%;
         padding: 0;
+        margin-top: 24px;
       }
 
+      @media @mobile {
+        margin-top: 0;
+      }
     }
 
     .img-content {
@@ -40,18 +52,38 @@
       img {
         border-radius: 10px;
         
-        @media @mobile {
+        @media @tablet {
           width: 100%;
         }
+
+        @media @mobile {
+          /* can be deleted while there is @media @tablet that is exactly the same,
+          but I still leave it there for the future adjustments */
+          
+          // width: 100%;
+        }
+      }
+
+      @media @tablet {
+        width: 75%;
+        padding: 0;
+        margin: 0 auto;
       }
 
       @media @mobile {
         width: 100%;
-        padding: 0;
       }
     }
-    @media @mobile {
+
+    @media @tablet {
       flex-direction: column;
+    }
+    
+    @media @mobile {
+      /* can be deleted while there is @media @tablet that is exactly the same,
+      but I still leave it there for the future adjustments */
+      
+      // flex-direction: column;
     }
   }
 
@@ -68,13 +100,26 @@
       padding-right: 1%;
       padding-left: 0;
 
-      @media @mobile {
+      @media @tablet {
         padding: 0;
       }
+
+      @media @mobile {
+        /* can be deleted while there is @media @tablet that is exactly the same,
+        but I still leave it there for the future adjustments */
+        
+        // padding: 0;
+      }
+    }
+
+    @media @tablet {
+      flex-direction: column;
+      padding: 30px 0 0;
     }
 
     @media @mobile {
       flex-direction: column-reverse;
+      padding: 0 0 30px;
     }
   }
 
@@ -86,8 +131,15 @@
       border-radius: 10px;
     }
 
-    @media @mobile {
+    @media @tablet {
       width: 100%;
+    }
+
+    @media @mobile {
+      /* can be deleted while there is @media @tablet that is exactly the same,
+      but I still leave it there for the future adjustments */
+      
+      // width: 100%;
     }
   }
 
@@ -103,18 +155,39 @@
 
       .btn {
         .button-gen();
-        @media @mobile {
-          width: 100%;
+
+        @media @tablet {
+          .button-gen(@btn-width: 100%);
         }
+
+        @media @mobile {
+          /* can be deleted while there is @media @tablet that is exactly the same,
+          but I still leave it there for the future adjustments */
+          
+          // width: 100%;
+        }
+      }
+
+      @media @tablet {
+        width: 45%;
+        margin: 0 auto 30px;
       }
 
       @media @mobile {
         width: 80%;
-        margin: 0 auto 30px;
       }
     }
+
+    @media @tablet {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
     @media @mobile {
-      flex-direction: column;
+      /* can be deleted while there is @media @tablet that is exactly the same,
+      but I still leave it there for the future adjustments */
+      
+      // flex-direction: column;
     }
   }
 }// home

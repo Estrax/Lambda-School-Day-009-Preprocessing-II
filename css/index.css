@@ -154,6 +154,11 @@ h4 {
   font-size: 2.5rem;
   padding-bottom: 10px;
 }
+@media (max-width: 800px) {
+  h4 {
+    font-size: 2.3rem;
+  }
+}
 p {
   line-height: 1.5;
   font-size: 1.6rem;
@@ -167,6 +172,11 @@ img {
   max-width: 800px;
   width: 100%;
   margin: 0 auto;
+}
+@media (max-width: 800px) {
+  .container {
+    width: 80%;
+  }
 }
 @media (max-width: 500px) {
   .container {
@@ -206,10 +216,21 @@ img {
   margin: 0 18px;
 }
 @media (max-width: 500px) {
+  .navigation-bar .nav-container nav a {
+    font-size: 14px;
+  }
+}
+@media (max-width: 800px) {
   .navigation-bar .nav-container nav {
     width: 80%;
     display: flex;
     justify-content: space-between;
+  }
+}
+@media (max-width: 500px) {
+  .navigation-bar .nav-container nav {
+    /* can be deleted while there is @media @tablet that is exactly the same,
+                but I still leave it there for the future adjustments */
   }
 }
 .navigation-bar .nav-container div {
@@ -221,7 +242,7 @@ img {
   font-family: 'Indie Flower', cursive;
   font-size: 32px;
 }
-@media (max-width: 500px) {
+@media (max-width: 800px) {
   .navigation-bar .nav-container div {
     width: 100%;
     text-align: center;
@@ -229,10 +250,22 @@ img {
   }
 }
 @media (max-width: 500px) {
+  .navigation-bar .nav-container div {
+    /* can be deleted while there is @media @tablet that is exactly the same,
+                but I still leave it there for the future adjustments */
+  }
+}
+@media (max-width: 800px) {
   .navigation-bar .nav-container {
     flex-direction: column;
     width: 100%;
     padding-bottom: 12px;
+  }
+}
+@media (max-width: 500px) {
+  .navigation-bar .nav-container {
+    /* can be deleted while there is @media @tablet that is exactly the same,
+            but I still leave it there for the future adjustments */
   }
 }
 .footer {
@@ -256,9 +289,15 @@ img {
 .home header p {
   margin-bottom: 16px;
 }
-@media (max-width: 500px) {
+@media (max-width: 800px) {
   .home header {
     margin-top: 110px;
+  }
+}
+@media (max-width: 500px) {
+  .home header {
+    /* can be deleted while there is @media @tablet that is exactly the same,
+      but I still leave it there for the future adjustments */
   }
 }
 .home .content-section {
@@ -271,10 +310,16 @@ img {
   width: 48%;
   padding-right: 1%;
 }
-@media (max-width: 500px) {
+@media (max-width: 800px) {
   .home .content-section .text-content {
     width: 100%;
     padding: 0;
+    margin-top: 24px;
+  }
+}
+@media (max-width: 500px) {
+  .home .content-section .text-content {
+    margin-top: 0;
   }
 }
 .home .content-section .img-content {
@@ -284,20 +329,38 @@ img {
 .home .content-section .img-content img {
   border-radius: 10px;
 }
-@media (max-width: 500px) {
+@media (max-width: 800px) {
   .home .content-section .img-content img {
     width: 100%;
   }
 }
 @media (max-width: 500px) {
+  .home .content-section .img-content img {
+    /* can be deleted while there is @media @tablet that is exactly the same,
+          but I still leave it there for the future adjustments */
+  }
+}
+@media (max-width: 800px) {
+  .home .content-section .img-content {
+    width: 75%;
+    padding: 0;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 500px) {
   .home .content-section .img-content {
     width: 100%;
-    padding: 0;
+  }
+}
+@media (max-width: 800px) {
+  .home .content-section {
+    flex-direction: column;
   }
 }
 @media (max-width: 500px) {
   .home .content-section {
-    flex-direction: column;
+    /* can be deleted while there is @media @tablet that is exactly the same,
+      but I still leave it there for the future adjustments */
   }
 }
 .home .inverse-content {
@@ -312,14 +375,27 @@ img {
   padding-right: 1%;
   padding-left: 0;
 }
-@media (max-width: 500px) {
+@media (max-width: 800px) {
   .home .inverse-content .img-content {
     padding: 0;
   }
 }
 @media (max-width: 500px) {
+  .home .inverse-content .img-content {
+    /* can be deleted while there is @media @tablet that is exactly the same,
+        but I still leave it there for the future adjustments */
+  }
+}
+@media (max-width: 800px) {
+  .home .inverse-content {
+    flex-direction: column;
+    padding: 30px 0 0;
+  }
+}
+@media (max-width: 500px) {
   .home .inverse-content {
     flex-direction: column-reverse;
+    padding: 0 0 30px;
   }
 }
 .home .content-destination {
@@ -329,9 +405,15 @@ img {
 .home .content-destination img {
   border-radius: 10px;
 }
-@media (max-width: 500px) {
+@media (max-width: 800px) {
   .home .content-destination {
     width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  .home .content-destination {
+    /* can be deleted while there is @media @tablet that is exactly the same,
+      but I still leave it there for the future adjustments */
   }
 }
 .home .content-pick {
@@ -353,19 +435,43 @@ img {
   padding: 14px 0;
   width: 80%;
 }
+@media (max-width: 800px) {
+  .home .content-pick .destination .btn {
+    background: #17A2B8;
+    color: #FFFFFF;
+    font-size: 18px;
+    text-align: center;
+    border-radius: 16px;
+    padding: 14px 0;
+    width: 100%;
+  }
+}
 @media (max-width: 500px) {
   .home .content-pick .destination .btn {
-    width: 100%;
+    /* can be deleted while there is @media @tablet that is exactly the same,
+          but I still leave it there for the future adjustments */
+  }
+}
+@media (max-width: 800px) {
+  .home .content-pick .destination {
+    width: 45%;
+    margin: 0 auto 30px;
   }
 }
 @media (max-width: 500px) {
   .home .content-pick .destination {
     width: 80%;
-    margin: 0 auto 30px;
+  }
+}
+@media (max-width: 800px) {
+  .home .content-pick {
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 }
 @media (max-width: 500px) {
   .home .content-pick {
-    flex-direction: column;
+    /* can be deleted while there is @media @tablet that is exactly the same,
+      but I still leave it there for the future adjustments */
   }
 }
