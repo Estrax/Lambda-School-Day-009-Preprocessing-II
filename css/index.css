@@ -1,3 +1,16 @@
+/*
+.anim-content(@name, @pos) {
+	0% {
+		transform: @name(@pos);
+		opacity: 0;
+	}
+
+	100% {
+		transform: @name(0);
+		opacity: 1;
+	}
+}
+*/
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
