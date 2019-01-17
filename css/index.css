@@ -172,6 +172,7 @@ img {
   max-width: 800px;
   width: 100%;
   margin: 0 auto;
+  animation: opacity 6s forwards;
 }
 @media (max-width: 800px) {
   .container {
@@ -191,6 +192,7 @@ img {
   z-index: 2;
   border-bottom: 2px dashed #C0C0C0;
   animation: slideFromTopNav 1.5s forwards;
+  animation-delay: 0;
 }
 .navigation-bar .nav-container {
   display: flex;
@@ -231,7 +233,7 @@ img {
 @media (max-width: 500px) {
   .navigation-bar .nav-container nav {
     /* can be deleted while there is @media @tablet that is exactly the same,
-                but I still leave it there for the future adjustments */
+				but I still leave it there for the future adjustments */
   }
 }
 .navigation-bar .nav-container div {
@@ -253,7 +255,7 @@ img {
 @media (max-width: 500px) {
   .navigation-bar .nav-container div {
     /* can be deleted while there is @media @tablet that is exactly the same,
-                but I still leave it there for the future adjustments */
+				but I still leave it there for the future adjustments */
   }
 }
 @media (max-width: 800px) {
@@ -266,14 +268,15 @@ img {
 @media (max-width: 500px) {
   .navigation-bar .nav-container {
     /* can be deleted while there is @media @tablet that is exactly the same,
-            but I still leave it there for the future adjustments */
+			but I still leave it there for the future adjustments */
   }
 }
 .footer {
   width: 100%;
   border-top: 2px dashed silver;
   background: #FFEBCD;
-  animation: slideFromBottom 7s forwards;
+  animation: slideFromBottom 8s forwards;
+  animation-delay: 0;
 }
 .footer p {
   text-align: center;
@@ -284,18 +287,22 @@ img {
 .home header {
   border-bottom: 2px dashed #C0C0C0;
   margin-top: 90px;
-  animation: slideFromTop 2s forwards;
+  animation: slideFromTop 4s forwards;
+  animation-delay: 0;
 }
 .home header h1 {
   margin: 24px 0 16px;
-  animation: slideFromRight 3s forwards;
+  animation: slideFromTop 4s forwards;
+  animation-delay: 0;
 }
 .home header p {
   margin-bottom: 16px;
-  animation: slideFromRight 3.2s forwards;
+  animation: slideFromLeft 4.2s forwards;
+  animation-delay: 0;
 }
 .home header img {
-  animation: slideFromLeft 3s forwards;
+  animation: slideFromRight 4s forwards;
+  animation-delay: 0;
 }
 @media (max-width: 800px) {
   .home header {
@@ -305,7 +312,7 @@ img {
 @media (max-width: 500px) {
   .home header {
     /* can be deleted while there is @media @tablet that is exactly the same,
-      but I still leave it there for the future adjustments */
+			but I still leave it there for the future adjustments */
   }
 }
 .home .content-section {
@@ -314,6 +321,7 @@ img {
   flex-wrap: wrap;
   justify-content: space-between;
   animation: slideFromLeft 4s forwards;
+  animation-delay: 0;
 }
 .home .content-section .text-content {
   width: 48%;
@@ -346,7 +354,7 @@ img {
 @media (max-width: 500px) {
   .home .content-section .img-content img {
     /* can be deleted while there is @media @tablet that is exactly the same,
-          but I still leave it there for the future adjustments */
+					but I still leave it there for the future adjustments */
   }
 }
 @media (max-width: 800px) {
@@ -369,13 +377,14 @@ img {
 @media (max-width: 500px) {
   .home .content-section {
     /* can be deleted while there is @media @tablet that is exactly the same,
-      but I still leave it there for the future adjustments */
+			but I still leave it there for the future adjustments */
   }
 }
 .home .inverse-content {
   padding-bottom: 30px;
   border-bottom: 2px dashed #C0C0C0;
   animation: slideFromRight 5s forwards;
+  animation-delay: 0;
 }
 .home .inverse-content .text-content {
   padding-left: 1%;
@@ -393,7 +402,7 @@ img {
 @media (max-width: 500px) {
   .home .inverse-content .img-content {
     /* can be deleted while there is @media @tablet that is exactly the same,
-        but I still leave it there for the future adjustments */
+				but I still leave it there for the future adjustments */
   }
 }
 @media (max-width: 800px) {
@@ -412,6 +421,7 @@ img {
   width: 75%;
   margin: 0 auto 30px;
   animation: slideFromLeft 5.5s forwards;
+  animation-delay: 0;
 }
 .home .content-destination img {
   border-radius: 10px;
@@ -424,7 +434,7 @@ img {
 @media (max-width: 500px) {
   .home .content-destination {
     /* can be deleted while there is @media @tablet that is exactly the same,
-      but I still leave it there for the future adjustments */
+			but I still leave it there for the future adjustments */
   }
 }
 .home .content-pick {
@@ -460,17 +470,20 @@ img {
 @media (max-width: 500px) {
   .home .content-pick .destination .btn {
     /* can be deleted while there is @media @tablet that is exactly the same,
-          but I still leave it there for the future adjustments */
+					but I still leave it there for the future adjustments */
   }
 }
 .home .content-pick .destination:first-child {
   animation: slideFromLeft 6s forwards;
+  animation-delay: 0;
 }
 .home .content-pick .destination:nth-child(2) {
-  animation: slideFromBottom 6.1s forwards;
+  animation: slideFromBottom 6s forwards;
+  animation-delay: 0;
 }
 .home .content-pick .destination:last-child {
   animation: slideFromRight 6.2s forwards;
+  animation-delay: 0;
 }
 @media (max-width: 800px) {
   .home .content-pick .destination {
@@ -479,12 +492,15 @@ img {
   }
   .home .content-pick .destination:first-child {
     animation: slideFromLeft 6s forwards;
+    animation-delay: 0;
   }
   .home .content-pick .destination:nth-child(2) {
-    animation: slideFromRight 6.1s forwards;
+    animation: slideFromRight 6.2s forwards;
+    animation-delay: 0;
   }
   .home .content-pick .destination:last-child {
-    animation: slideFromBottom 6.2s forwards;
+    animation: slideFromBottom 6.5s forwards;
+    animation-delay: 0;
   }
 }
 @media (max-width: 500px) {
@@ -501,15 +517,17 @@ img {
 @media (max-width: 500px) {
   .home .content-pick {
     /* can be deleted while there is @media @tablet that is exactly the same,
-      but I still leave it there for the future adjustments */
+			but I still leave it there for the future adjustments */
   }
 }
 @keyframes slideFromLeft {
   0% {
     transform: translateX(-6000px);
+    opacity: 0;
   }
   100% {
     transform: translateX(0);
+    opacity: 1;
   }
 }
 @keyframes slideFromRight {
@@ -545,5 +563,14 @@ img {
   }
   100% {
     transform: translateY(0);
+  }
+}
+@keyframes opacity {
+  0%,
+  33% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }

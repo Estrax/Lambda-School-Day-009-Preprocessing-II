@@ -1,17 +1,29 @@
 // Mixins in here
 
 .button-gen(@color: @button-bg, @txtcolor: @white, @fontsize: 18px, @txtalign: center, @btn-border-radius: 16px, @btn-padding: 14px 0, @btn-width: 80%) {
-    background: @color;
-    color: @txtcolor;
-    font-size: @fontsize;
-    text-align: @txtalign;
-    border-radius: @btn-border-radius;
-    padding: @btn-padding;
-    width: @btn-width;
+	background: @color;
+	color: @txtcolor;
+	font-size: @fontsize;
+	text-align: @txtalign;
+	border-radius: @btn-border-radius;
+	padding: @btn-padding;
+	width: @btn-width;
 }
 
 .keyframes(@name, @rules) {
-    @keyframes @name {
-        @rules();
-    }
+	@keyframes @name {
+		@rules();
+	}
+}
+
+.anim-content(@name, @pos) {
+	0% {
+		transform: @name(@pos);
+		opacity: 0;
+	}
+
+	100% {
+		transform: @name(0);
+		opacity: 1;
+	}
 }

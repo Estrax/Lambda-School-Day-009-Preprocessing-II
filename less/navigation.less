@@ -5,93 +5,93 @@
 	background: @white;
 	position: fixed;
 	top: 0;
-    z-index: 2;
-    border-bottom: 2px dashed @navigation-border;
-    .slide(slideFromTopNav, 1.5s);
+	z-index: 2;
+	border-bottom: 2px dashed @navigation-border;
+	.slide(slideFromTopNav, 1.5s);
 
-    .nav-container {
-        display: flex;
-        width: 80%;
-        max-width: 800px;
-        padding: 30px 0;
-        align-items: center;
-        justify-content: space-between;
-        align-self: center;
-        margin: 0 auto;
+	.nav-container {
+		display: flex;
+		width: 80%;
+		max-width: 800px;
+		padding: 30px 0;
+		align-items: center;
+		justify-content: space-between;
+		align-self: center;
+		margin: 0 auto;
 
-        nav {
-            justify-content: space-between;
+		nav {
+			justify-content: space-between;
 
-            a {
-                color: @font-color;
-                text-decoration: none;
-                font-size: 16px;
-                &:first-child {
-                    margin-right: 18px;
-                }
-                
-                &:not(:first-child) {
-                    margin: 0 18px;
-                }
+			a {
+				color: @font-color;
+				text-decoration: none;
+				font-size: 16px;
+				&:first-child {
+					margin-right: 18px;
+				}
+				
+				&:not(:first-child) {
+					margin: 0 18px;
+				}
 
-                @media @mobile {
-                    font-size: 14px;
-                }
-            }
+				@media @mobile {
+					font-size: 14px;
+				}
+			}
 
-            @media @tablet {
-                width: 80%;
-                display: flex;
-                justify-content: space-between;
-            }
+			@media @tablet {
+				width: 80%;
+				display: flex;
+				justify-content: space-between;
+			}
 
-            @media @mobile {
-                /* can be deleted while there is @media @tablet that is exactly the same,
-                but I still leave it there for the future adjustments */
-                
-                // width: 80%;
-                // display: flex;
-                // justify-content: space-between;
-            }
-        }
-        div {
-            width: 20%;
-            a {
-                text-decoration: none;
-                color: @font-color;
-                font-family: 'Indie Flower', cursive;
-                font-size: 32px;
-            }
+			@media @mobile {
+				/* can be deleted while there is @media @tablet that is exactly the same,
+				but I still leave it there for the future adjustments */
+				
+				// width: 80%;
+				// display: flex;
+				// justify-content: space-between;
+			}
+		}
+		div {
+			width: 20%;
+			a {
+				text-decoration: none;
+				color: @font-color;
+				font-family: 'Indie Flower', cursive;
+				font-size: 32px;
+			}
 
-            @media @tablet {
-                width: 100%;
-                text-align: center;
-                margin-bottom: 24px;
-            }
+			@media @tablet {
+				width: 100%;
+				text-align: center;
+				margin-bottom: 24px;
+			}
 
-            @media @mobile {
-                /* can be deleted while there is @media @tablet that is exactly the same,
-                but I still leave it there for the future adjustments */
-                
-                // width: 100%;
-                // text-align: center;
-                // margin-bottom: 24px;
-            }
-        }
+			@media @mobile {
+				/* can be deleted while there is @media @tablet that is exactly the same,
+				but I still leave it there for the future adjustments */
+				
+				// width: 100%;
+				// text-align: center;
+				// margin-bottom: 24px;
+			}
+		}
 
-        @media @tablet {
-            flex-direction: column;
-            width: 100%;
-            padding-bottom: 12px;
-        }
+		@media @tablet {
+			flex-direction: column;
+			width: 100%;
+			padding-bottom: 12px;
+		}
 
-        @media @mobile {
-            /* can be deleted while there is @media @tablet that is exactly the same,
-            but I still leave it there for the future adjustments */
-            
-            // flex-direction: column;
-            // width: 100%;
-            // padding-bottom: 12px;
-        }
-    }
+		@media @mobile {
+			/* can be deleted while there is @media @tablet that is exactly the same,
+			but I still leave it there for the future adjustments */
+			
+			// flex-direction: column;
+			// width: 100%;
+			// padding-bottom: 12px;
+		}
+	}
 }
