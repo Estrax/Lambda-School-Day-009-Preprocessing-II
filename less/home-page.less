@@ -1,61 +1,228 @@
 .home {
 
-  .content-section {
-    margin: 30px 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+	header {
+		border-bottom: 2px dashed @navigation-border;
+		margin-top: 90px;
+		.slide(slideFromTop, 4s);
+		
+		h1 {
+			margin: 24px 0 16px;
+			.slide(slideFromTop, 4s);
+		}
 
-   
-    
-    .text-content {
-      width: 48%;
-      padding-right: 1%;
-    }
+		p {
+			margin-bottom: 16px;
+			.slide(slideFromLeft, 4.2s);
+		}
 
-    .img-content {
-      width: 48%;
-      padding-left: 1%;
+		img {
+			.slide(slideFromRight, 4s);
+		}
 
-      img {
-        border-radius: 10px;
-      }
-    }
-  }
+		@media @tablet {
+			margin-top: 110px;
+		}
 
-  .inverse-content {
-    padding-bottom: 30px;
-    border-bottom: 2px dashed @navigation-border;
+		@media @mobile {
+			/* can be deleted while there is @media @tablet that is exactly the same,
+			but I still leave it there for the future adjustments */
+			
+			// margin-top: 110px;
+		}
+	}
 
-    .text-content {
-      padding-left: 1%;
-      padding-right: 0;
-    }
+	.content-section {
+		margin: 30px 0;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		.slide(slideFromLeft, 4s);
+		
+		.text-content {
+			width: 48%;
+			padding-right: 1%;
+			
+			@media @tablet {
+				width: 100%;
+				padding: 0;
+				margin-top: 24px;
+			}
 
-    .img-content {
-      padding-right: 1%;
-      padding-left: 0;
-    }
-  }
+			@media @mobile {
+				margin-top: 0;
+			}
+		}
 
-  .content-destination {
-    width: 75%;
-    margin: 0 auto 30px;
+		.img-content {
+			width: 48%;
+			padding-left: 1%;
 
-    img {
-      border-radius: 10px;
-    }
-  }
+			img {
+				border-radius: 10px;
+				
+				@media @tablet {
+					width: 100%;
+				}
 
-  .content-pick {
-    padding-top: 30px;
-    border-top: 2px dashed @navigation-border;
-    display: flex;
-    justify-content: space-between;
+				@media @mobile {
+					/* can be deleted while there is @media @tablet that is exactly the same,
+					but I still leave it there for the future adjustments */
+					
+					// width: 100%;
+				}
+			}
 
-    .destination {
-      width: 30%;
-      margin-bottom: 30px;
-    }
-  }
+			@media @tablet {
+				width: 75%;
+				padding: 0;
+				margin: 0 auto;
+			}
+
+			@media @mobile {
+				width: 100%;
+			}
+		}
+
+		@media @tablet {
+			flex-direction: column;
+		}
+		
+		@media @mobile {
+			/* can be deleted while there is @media @tablet that is exactly the same,
+			but I still leave it there for the future adjustments */
+			
+			// flex-direction: column;
+		}
+	}
+
+	.inverse-content {
+		padding-bottom: 30px;
+		border-bottom: 2px dashed @navigation-border;
+		.slide(slideFromRight, 5s);
+
+		.text-content {
+			padding-left: 1%;
+			padding-right: 0;
+		}
+
+		.img-content {
+			padding-right: 1%;
+			padding-left: 0;
+
+			@media @tablet {
+				padding: 0;
+			}
+
+			@media @mobile {
+				/* can be deleted while there is @media @tablet that is exactly the same,
+				but I still leave it there for the future adjustments */
+				
+				// padding: 0;
+			}
+		}
+
+		@media @tablet {
+			flex-direction: column;
+			padding: 30px 0 0;
+		}
+
+		@media @mobile {
+			flex-direction: column-reverse;
+			padding: 0 0 30px;
+		}
+	}
+
+	.content-destination {
+		width: 75%;
+		margin: 0 auto 30px;
+		
+		.slide(slideFromLeft, 5.5s);
+
+		img {
+			border-radius: 10px;
+		}
+
+		@media @tablet {
+			width: 100%;
+		}
+
+		@media @mobile {
+			/* can be deleted while there is @media @tablet that is exactly the same,
+			but I still leave it there for the future adjustments */
+			
+			// width: 100%;
+		}
+	}
+
+	.content-pick {
+		padding-top: 30px;
+		border-top: 2px dashed @navigation-border;
+		display: flex;
+		justify-content: space-between;
+
+		.destination {
+			width: 30%;
+			margin-bottom: 30px;
+
+			.btn {
+				.button-gen();
+
+				@media @tablet {
+					.button-gen(@btn-width: 100%);
+				}
+
+				@media @mobile {
+					/* can be deleted while there is @media @tablet that is exactly the same,
+					but I still leave it there for the future adjustments */
+					
+					// width: 100%;
+				}
+			}
+
+			&:first-child {
+				.slide(slideFromLeft, 6s);
+			}
+
+			&:nth-child(2) {
+				.slide(slideFromBottom, 6s);
+			}
+
+			&:last-child {
+				.slide(slideFromRight, 6.2s);
+			}
+
+			@media @tablet {
+				width: 45%;
+				margin: 0 auto 30px;
+
+				&:first-child {
+					.slide(slideFromLeft, 6s);
+				}
+	
+				&:nth-child(2) {
+					.slide(slideFromRight, 6.2s);
+				}
+	
+				&:last-child {
+					.slide(slideFromBottom, 6.5s);
+				}
+			}
+
+			@media @mobile {
+				width: 80%;
+			}
+		}
+
+		@media @tablet {
+			flex-direction: row;
+			flex-wrap: wrap;
+		}
+
+		@media @mobile {
+			/* can be deleted while there is @media @tablet that is exactly the same,
+			but I still leave it there for the future adjustments */
+			
+			// flex-direction: column;
+		}
+	}
 }// home

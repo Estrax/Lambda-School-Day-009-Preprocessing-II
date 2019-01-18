@@ -1,1 +1,576 @@
-/* LESS needs to be processed */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+html,
+body {
+  font-family: 'Roboto', sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Indie Flower', cursive;
+}
+h1 {
+  font-size: 4rem;
+}
+h2 {
+  font-size: 3.2rem;
+  padding-bottom: 10px;
+}
+h4 {
+  font-size: 2.5rem;
+  padding-bottom: 10px;
+}
+@media (max-width: 800px) {
+  h4 {
+    font-size: 2.3rem;
+  }
+}
+p {
+  line-height: 1.5;
+  font-size: 1.6rem;
+  padding-bottom: 10px;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+.container {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  animation: opacity 6s forwards;
+}
+@media (max-width: 800px) {
+  .container {
+    width: 80%;
+  }
+}
+@media (max-width: 500px) {
+  .container {
+    width: 90%;
+  }
+}
+.navigation-bar {
+  width: 100%;
+  background: #FFFFFF;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  border-bottom: 2px dashed #C0C0C0;
+  animation: slideFromTopNav 1.5s forwards;
+  animation-delay: 0;
+}
+.navigation-bar .nav-container {
+  display: flex;
+  width: 80%;
+  max-width: 800px;
+  padding: 30px 0;
+  align-items: center;
+  justify-content: space-between;
+  align-self: center;
+  margin: 0 auto;
+}
+.navigation-bar .nav-container nav {
+  justify-content: space-between;
+}
+.navigation-bar .nav-container nav a {
+  color: #212529;
+  text-decoration: none;
+  font-size: 16px;
+}
+.navigation-bar .nav-container nav a:first-child {
+  margin-right: 18px;
+}
+.navigation-bar .nav-container nav a:not(:first-child) {
+  margin: 0 18px;
+}
+@media (max-width: 500px) {
+  .navigation-bar .nav-container nav a {
+    font-size: 14px;
+  }
+}
+@media (max-width: 800px) {
+  .navigation-bar .nav-container nav {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+@media (max-width: 500px) {
+  .navigation-bar .nav-container nav {
+    /* can be deleted while there is @media @tablet that is exactly the same,
+				but I still leave it there for the future adjustments */
+  }
+}
+.navigation-bar .nav-container div {
+  width: 20%;
+}
+.navigation-bar .nav-container div a {
+  text-decoration: none;
+  color: #212529;
+  font-family: 'Indie Flower', cursive;
+  font-size: 32px;
+}
+@media (max-width: 800px) {
+  .navigation-bar .nav-container div {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 24px;
+  }
+}
+@media (max-width: 500px) {
+  .navigation-bar .nav-container div {
+    /* can be deleted while there is @media @tablet that is exactly the same,
+				but I still leave it there for the future adjustments */
+  }
+}
+@media (max-width: 800px) {
+  .navigation-bar .nav-container {
+    flex-direction: column;
+    width: 100%;
+    padding-bottom: 12px;
+  }
+}
+@media (max-width: 500px) {
+  .navigation-bar .nav-container {
+    /* can be deleted while there is @media @tablet that is exactly the same,
+			but I still leave it there for the future adjustments */
+  }
+}
+.footer {
+  width: 100%;
+  border-top: 2px dashed silver;
+  background: #FFEBCD;
+  animation: slideFromBottom 8s forwards;
+  animation-delay: 0;
+}
+.footer p {
+  text-align: center;
+  color: #212529;
+  font-size: 1.6rem;
+  padding: 20px;
+}
+.home header {
+  border-bottom: 2px dashed #C0C0C0;
+  margin-top: 90px;
+  animation: slideFromTop 4s forwards;
+  animation-delay: 0;
+}
+.home header h1 {
+  margin: 24px 0 16px;
+  animation: slideFromTop 4s forwards;
+  animation-delay: 0;
+}
+.home header p {
+  margin-bottom: 16px;
+  animation: slideFromLeft 4.2s forwards;
+  animation-delay: 0;
+}
+.home header img {
+  animation: slideFromRight 4s forwards;
+  animation-delay: 0;
+}
+@media (max-width: 800px) {
+  .home header {
+    margin-top: 110px;
+  }
+}
+@media (max-width: 500px) {
+  .home header {
+    /* can be deleted while there is @media @tablet that is exactly the same,
+			but I still leave it there for the future adjustments */
+  }
+}
+.home .content-section {
+  margin: 30px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  animation: slideFromLeft 4s forwards;
+  animation-delay: 0;
+}
+.home .content-section .text-content {
+  width: 48%;
+  padding-right: 1%;
+}
+@media (max-width: 800px) {
+  .home .content-section .text-content {
+    width: 100%;
+    padding: 0;
+    margin-top: 24px;
+  }
+}
+@media (max-width: 500px) {
+  .home .content-section .text-content {
+    margin-top: 0;
+  }
+}
+.home .content-section .img-content {
+  width: 48%;
+  padding-left: 1%;
+}
+.home .content-section .img-content img {
+  border-radius: 10px;
+}
+@media (max-width: 800px) {
+  .home .content-section .img-content img {
+    width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  .home .content-section .img-content img {
+    /* can be deleted while there is @media @tablet that is exactly the same,
+					but I still leave it there for the future adjustments */
+  }
+}
+@media (max-width: 800px) {
+  .home .content-section .img-content {
+    width: 75%;
+    padding: 0;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 500px) {
+  .home .content-section .img-content {
+    width: 100%;
+  }
+}
+@media (max-width: 800px) {
+  .home .content-section {
+    flex-direction: column;
+  }
+}
+@media (max-width: 500px) {
+  .home .content-section {
+    /* can be deleted while there is @media @tablet that is exactly the same,
+			but I still leave it there for the future adjustments */
+  }
+}
+.home .inverse-content {
+  padding-bottom: 30px;
+  border-bottom: 2px dashed #C0C0C0;
+  animation: slideFromRight 5s forwards;
+  animation-delay: 0;
+}
+.home .inverse-content .text-content {
+  padding-left: 1%;
+  padding-right: 0;
+}
+.home .inverse-content .img-content {
+  padding-right: 1%;
+  padding-left: 0;
+}
+@media (max-width: 800px) {
+  .home .inverse-content .img-content {
+    padding: 0;
+  }
+}
+@media (max-width: 500px) {
+  .home .inverse-content .img-content {
+    /* can be deleted while there is @media @tablet that is exactly the same,
+				but I still leave it there for the future adjustments */
+  }
+}
+@media (max-width: 800px) {
+  .home .inverse-content {
+    flex-direction: column;
+    padding: 30px 0 0;
+  }
+}
+@media (max-width: 500px) {
+  .home .inverse-content {
+    flex-direction: column-reverse;
+    padding: 0 0 30px;
+  }
+}
+.home .content-destination {
+  width: 75%;
+  margin: 0 auto 30px;
+  animation: slideFromLeft 5.5s forwards;
+  animation-delay: 0;
+}
+.home .content-destination img {
+  border-radius: 10px;
+}
+@media (max-width: 800px) {
+  .home .content-destination {
+    width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  .home .content-destination {
+    /* can be deleted while there is @media @tablet that is exactly the same,
+			but I still leave it there for the future adjustments */
+  }
+}
+.home .content-pick {
+  padding-top: 30px;
+  border-top: 2px dashed #C0C0C0;
+  display: flex;
+  justify-content: space-between;
+}
+.home .content-pick .destination {
+  width: 30%;
+  margin-bottom: 30px;
+}
+.home .content-pick .destination .btn {
+  background: #17A2B8;
+  color: #FFFFFF;
+  font-size: 18px;
+  text-align: center;
+  border-radius: 16px;
+  padding: 14px 0;
+  width: 80%;
+}
+@media (max-width: 800px) {
+  .home .content-pick .destination .btn {
+    background: #17A2B8;
+    color: #FFFFFF;
+    font-size: 18px;
+    text-align: center;
+    border-radius: 16px;
+    padding: 14px 0;
+    width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  .home .content-pick .destination .btn {
+    /* can be deleted while there is @media @tablet that is exactly the same,
+					but I still leave it there for the future adjustments */
+  }
+}
+.home .content-pick .destination:first-child {
+  animation: slideFromLeft 6s forwards;
+  animation-delay: 0;
+}
+.home .content-pick .destination:nth-child(2) {
+  animation: slideFromBottom 6s forwards;
+  animation-delay: 0;
+}
+.home .content-pick .destination:last-child {
+  animation: slideFromRight 6.2s forwards;
+  animation-delay: 0;
+}
+@media (max-width: 800px) {
+  .home .content-pick .destination {
+    width: 45%;
+    margin: 0 auto 30px;
+  }
+  .home .content-pick .destination:first-child {
+    animation: slideFromLeft 6s forwards;
+    animation-delay: 0;
+  }
+  .home .content-pick .destination:nth-child(2) {
+    animation: slideFromRight 6.2s forwards;
+    animation-delay: 0;
+  }
+  .home .content-pick .destination:last-child {
+    animation: slideFromBottom 6.5s forwards;
+    animation-delay: 0;
+  }
+}
+@media (max-width: 500px) {
+  .home .content-pick .destination {
+    width: 80%;
+  }
+}
+@media (max-width: 800px) {
+  .home .content-pick {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 500px) {
+  .home .content-pick {
+    /* can be deleted while there is @media @tablet that is exactly the same,
+			but I still leave it there for the future adjustments */
+  }
+}
+@keyframes slideFromLeft {
+  0% {
+    transform: translateX(-6000px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slideFromRight {
+  0% {
+    transform: translateX(6000px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes slideFromTop {
+  0% {
+    transform: translateY(-6000px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes slideFromBottom {
+  0% {
+    transform: translateY(6000px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes slideFromTopNav {
+  0% {
+    transform: translateY(-6000px);
+  }
+  75% {
+    transform: translateY(200px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes opacity {
+  0%,
+  33% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
